@@ -19,11 +19,14 @@ struct TimePicker: View {
                     .frame(width: 30, height: 20)
                     .padding(.bottom,5)
                     .onTapGesture {
-                        hour = hour+1
+                        if hour < 23 {
+                            hour = hour+1
+                        }
                     }
                 
                 Text("\(getTimeString(t:hour))")
                     .font(.title)
+                    .minimumScaleFactor(0.01)
                 
                 Image(systemName: "chevron.down")
                     .resizable()
@@ -45,11 +48,14 @@ struct TimePicker: View {
                     .frame(width: 30, height: 20)
                     .padding(.bottom,5)
                     .onTapGesture {
-                        minute = minute+1
+                        if minute < 59 {
+                            minute = minute+1
+                        }
                     }
                 
                 Text("\(getTimeString(t:minute))")
                     .font(.title)
+                    .minimumScaleFactor(0.01)
                 
                 Image(systemName: "chevron.down")
                     .resizable()
@@ -71,11 +77,14 @@ struct TimePicker: View {
                     .frame(width: 30, height: 20)
                     .padding(.bottom,5)
                     .onTapGesture {
-                        second = second+1
+                        if second < 59 {
+                            second = second+1
+                        }
                     }
                 
                 Text("\(getTimeString(t:second))")
                     .font(.title)
+                    .minimumScaleFactor(0.01)
                 
                 Image(systemName: "chevron.down")
                     .resizable()

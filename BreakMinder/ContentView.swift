@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var timerStarted = false
     @State private var hour = 0
     @State private var minute = 0
     @State private var second = 1
@@ -18,22 +17,21 @@ struct ContentView: View {
     @State private var targetSecond = 1
 
     @State private var timer: Timer?
+    @State private var timerStarted = false
     @State private var showAlert = false
 
     var body: some View {
         VStack {
             Text("Break Reminder").font(.largeTitle).padding()
-            Spacer()
-            
-            if (!timerStarted) {
-                TimePicker(hour: $hour, minute: $minute, second: $second)
-                    .transition(.scale)
-            } else {
-                CountdownView(hour: $hour, minute: $minute, second: $second,
-                              targetHour: $targetHour, targetMinute: $targetMinute, targetSecond: $targetSecond)
-                    .transition(.scale)
-            }
-            
+            Spacer()            
+                if (!timerStarted) {
+                    TimePicker(hour: $hour, minute: $minute, second: $second)
+                        .transition(.scale)
+                } else {
+                    CountdownView(hour: $hour, minute: $minute, second: $second,
+                                  targetHour: $targetHour, targetMinute: $targetMinute, targetSecond: $targetSecond)
+                        .transition(.scale)
+                }
             Spacer()
             
             HStack {
@@ -41,14 +39,16 @@ struct ContentView: View {
                     ZStack {
                         Circle()
                             .frame(width: 80)
-                            .foregroundColor(.green)
+                            .foregroundColor(timerStarted ? .gray : .green)
                         Image(systemName: "play.fill")
                             .resizable()
                             .frame(width: 40, height: 40)
                             .foregroundColor(.white)
                             .padding(.leading, 6)
                     }
-                }.padding(.trailing,20)
+                }
+                .padding(.trailing,20)
+                .disabled(timerStarted)
                 
                 Button(action: stopTimer) {
                     ZStack {
