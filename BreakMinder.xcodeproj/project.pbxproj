@@ -12,6 +12,7 @@
 		903F8F902B0F7DB400CD41F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903F8F8F2B0F7DB400CD41F6 /* Assets.xcassets */; };
 		903F8F932B0F7DB400CD41F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903F8F922B0F7DB400CD41F6 /* Preview Assets.xcassets */; };
 		903F8F9A2B0F7EB000CD41F6 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903F8F992B0F7EB000CD41F6 /* TimePicker.swift */; };
+		905A32C22B18B5A40055764F /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A32C12B18B5A40055764F /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		903F8F8F2B0F7DB400CD41F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		903F8F922B0F7DB400CD41F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		903F8F992B0F7EB000CD41F6 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		905A32C12B18B5A40055764F /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				903F8F8B2B0F7DB200CD41F6 /* BreakMinderApp.swift */,
 				903F8F8D2B0F7DB200CD41F6 /* ContentView.swift */,
+				905A32C12B18B5A40055764F /* CountdownView.swift */,
 				903F8F992B0F7EB000CD41F6 /* TimePicker.swift */,
 				903F8F8F2B0F7DB400CD41F6 /* Assets.xcassets */,
 				903F8F912B0F7DB400CD41F6 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				903F8F9A2B0F7EB000CD41F6 /* TimePicker.swift in Sources */,
 				903F8F8E2B0F7DB200CD41F6 /* ContentView.swift in Sources */,
+				905A32C22B18B5A40055764F /* CountdownView.swift in Sources */,
 				903F8F8C2B0F7DB200CD41F6 /* BreakMinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
